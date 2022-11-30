@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>velocidade de transito</title>
+    <style>
+        div#res {
+            color: blue;
+        }
+    </style>
+
+</head>
+<h1>Sistema de transito</h1>
+<body>
+    Qual a velocidade do carro : <input type="number" name="txt1" id="txt1"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+<script>
+        
+    function calcular() {
+        var vel = window.document.getElementById('txt1')
+        var res = window.document.getElementById('res')
+        var vel1 = Number(vel.value)
+        res.innerHTML = `<p>Sua velocidade é <strong>${vel1}</strong> Km/H</p>`
+        if (vel1 > 100){
+            res.innerHTML += `voce foi <strong>multado</strong>`
+    
+        }
+
+        res.innerHTML += `<p>Dirija com cuidado, sempre use cinto de segurança</p>`
+    }
+    
+</script>
+    
+</body>
+</html>
